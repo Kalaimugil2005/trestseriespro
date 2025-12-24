@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Series Pro | Join & Earn | Mock Tests</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;color:#1f1147;overflow-x:hidden;}
+
+/* BACKGROUND */
+.background{position:fixed;inset:0;background:radial-gradient(circle at top,#efe6ff,#d6c2ff,#b197fc);z-index:-1;}
+.blob{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(150px);opacity:.65;animation:float 22s infinite alternate;}
+.blob.one{background:#e7c6ff;top:8%;left:5%;}.blob.two{background:#b197fc;top:55%;left:60%;}.blob.three{background:#7b2cbf;top:70%;left:15%;}
+@keyframes float{from{transform:translate(0) scale(1);}to{transform:translate(120px,-120px) scale(1.25);}}
+
+/* FIXED CORNER LOGO */
+.company-logo{position:fixed;top:18px;left:22px;width:120px;padding:14px;border-radius:22px;background:rgba(255,255,255,.25);backdrop-filter:blur(14px);border:2px solid #b197fc;box-shadow:0 12px 25px rgba(0,0,0,.25),0 0 22px #b197fc;animation:logoFloat 6s infinite;}
+@keyframes logoFloat{0%,100%{transform:rotate(0deg);}50%{transform:rotate(3deg);}}
+
+/* HEADER */
+header{text-align:center;padding:110px 20px;}
+.header-logo{width:110px;margin:0 auto 18px;padding:14px;border-radius:26px;background:rgba(255,255,255,.3);backdrop-filter:blur(14px);border:2px solid #b197fc;box-shadow:0 18px 35px rgba(60,9,108,.35),0 0 20px #c77dff;animation:logoSpin 8s linear infinite;}
+@keyframes logoSpin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+header h1{font-family:'Playfair Display';font-size:3.6rem;background:linear-gradient(90deg,#3c096c,#9d4edd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+header p{color:#2b124c;font-size:1.2rem;margin-top:12px;}
+
+/* MAIN */
+main{max-width:950px;margin:-60px auto 80px;padding:65px 40px;background:rgba(255,255,255,.25);backdrop-filter:blur(26px);border-radius:40px;box-shadow:0 35px 80px rgba(60,9,108,.35);}
+.section-title{text-align:center;font-family:'Playfair Display';font-size:2.3rem;margin-bottom:35px;background:linear-gradient(90deg,#240046,#9d4edd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+form{display:grid;gap:20px;margin-bottom:60px;}
+input,textarea{padding:16px;border-radius:18px;border:none;background:white;}
+button{padding:16px;border-radius:50px;border:none;font-size:1.1rem;font-weight:600;color:white;background:linear-gradient(45deg,#5a189a,#9d4edd);cursor:pointer;}
+
+/* PROGRESS */
+.progress-box{margin:20px 0 40px;}
+.progress{height:14px;border-radius:20px;background:#e6ccff;overflow:hidden;}
+.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#7b2cbf,#c77dff);}
+
+/* ABOUT */
+.about-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center;margin-bottom:60px;}
+.about-text p{line-height:1.7;color:#2b124c;margin-bottom:10px;}
+.mock-3d{perspective:1200px;}
+.mock-3d img{width:100%;border-radius:28px;padding:12px;background:rgba(255,255,255,.35);border:2px solid #b197fc;box-shadow:0 35px 70px rgba(60,9,108,.45);transform:rotateY(-15deg) rotateX(6deg);animation:float3d 4s ease-in-out infinite;}
+@keyframes float3d{0%{transform:rotateY(-15deg) rotateX(6deg);}50%{transform:rotateY(-8deg) rotateX(3deg) translateY(-10px);}100%{transform:rotateY(-15deg) rotateX(6deg);}}
+.success-quote{text-align:center;margin-top:15px;font-size:.95rem;font-style:italic;color:#5a189a;opacity:.85;}
+
+/* POPUP */
+.popup{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;align-items:center;justify-content:center;}
+.popup-box{background:white;padding:40px;border-radius:30px;text-align:center;}
+footer{text-align:center;color:#240046;padding:30px;}
+
+/* BUTTON POP ANIMATION */
+button.pop{animation:popBtn 2.5s infinite;}
+@keyframes popBtn{0%,100%{transform:scale(1);}50%{transform:scale(1.08);}}
+
+/* QUESTIONS */
+.question-box{display:none;margin-top:30px;padding:30px;border-radius:30px;background:rgba(255,255,255,.4);}
+.question{margin-bottom:20px;}
+.options button{display:block;width:100%;margin-bottom:10px;background:linear-gradient(45deg,#7b2cbf,#c77dff);font-size:1rem;color:white;border:none;border-radius:14px;cursor:pointer;}
+.options button.selected{background:linear-gradient(45deg,#ff9f1c,#ffd166);}
+</style>
+</head>
+
+<body>
+
+<img src="mocklogo.jpeg" class="company-logo">
+
+<div class="background">
+ <div class="blob one"></div>
+ <div class="blob two"></div>
+ <div class="blob three"></div>
+</div>
+
+<header>
+ <img src="tsp.jpg" class="header-logo">
+ <h1>Test Series Pro</h1>
+ <p>Smart Learning • Real Practice • Career Success</p>
+</header>
+
+<main>
+
+<h2 class="section-title">About Test Series Pro</h2>
+<div class="about-wrap">
+ <div class="about-text">
+  <p>Test Series Pro provides real-exam based mock tests to help students and job seekers improve accuracy and confidence.</p>
+  <p>📍 <strong>Address:</strong> Ambattur, Chennai</p>
+  <p>📧 <strong>Email:</strong> testseries@gmail.com</p>
+ </div>
+ <div class="mock-3d">
+  <img src="mocktest image.jpeg">
+ </div>
+</div>
+
+<h2 class="section-title">Step 1 : Join & Earn</h2>
+<form>
+ <input placeholder="Full Name" required>
+ <input type="email" placeholder="Email" required>
+ <button class="pop">Join Now</button>
+</form>
+
+<h2 class="section-title">Step 2 : Mock Test</h2>
+<div style="text-align:center;font-weight:600;color:#3c096c;margin-bottom:20px">Test Duration: <span id="time">60:00</span></div>
+<div class="progress-box"><div class="progress"><div class="progress-fill"></div></div></div>
+
+<button id="startBtn" class="pop">Start Test</button>
+
+<div class="question-box" id="questionBox">
+ <!-- 10 Questions -->
+ <div class="question"><h4>1. 10 + 5 = ?</h4><div class="options"><button>10</button><button>15</button><button>20</button></div></div>
+ <div class="question"><h4>2. HTML stands for?</h4><div class="options"><button>Hyper Text Markup Language</button><button>High Text Machine Language</button><button>Hyper Tool Language</button></div></div>
+ <div class="question"><h4>3. CSS is used for?</h4><div class="options"><button>Styling</button><button>Structure</button><button>Logic</button></div></div>
+ <div class="question"><h4>4. JS is short for?</h4><div class="options"><button>JavaScript</button><button>Java Source</button><button>Just Script</button></div></div>
+ <div class="question"><h4>5. 5 × 5 = ?</h4><div class="options"><button>20</button><button>25</button><button>30</button></div></div>
+ <div class="question"><h4>6. Chrome is a?</h4><div class="options"><button>Browser</button><button>OS</button><button>Language</button></div></div>
+ <div class="question"><h4>7. Python is?</h4><div class="options"><button>Programming Language</button><button>Database</button><button>Browser</button></div></div>
+ <div class="question"><h4>8. 100 / 10 = ?</h4><div class="options"><button>10</button><button>5</button><button>20</button></div></div>
+ <div class="question"><h4>9. Which is an OS?</h4><div class="options"><button>Windows</button><button>HTML</button><button>Chrome</button></div></div>
+ <div class="question"><h4>10. Full form of CPU?</h4><div class="options"><button>Central Processing Unit</button><button>Computer Power Unit</button><button>Core Processing Unit</button></div></div>
+
+ <button id="submitBtn" class="pop">Submit Test</button>
+ <p class="success-quote">“Success doesn’t come from what you do occasionally, it comes from what you do consistently.”</p>
+</div>
+
+</main>
+<footer>© 2025 Test Series Pro — Premium UI</footer>
+
+<div class="popup" id="popup">
+ <div class="popup-box">
+  <h2>🎉 Success</h2>
+  <button onclick="popup.style.display='none'">OK</button>
+ </div>
+</div>
+
+<script>
+let time=3600,timer;
+const timeSpan=document.getElementById("time");
+
+// Start Test
+startBtn.onclick=()=>{
+ startBtn.style.display="none";
+ questionBox.style.display="block";
+ timer=setInterval(()=>{
+  time--;
+  let m=Math.floor(time/60),s=time%60;
+  timeSpan.textContent=`${m}:${s<10?'0':''}${s}`;
+  if(time<=0){clearInterval(timer);popup.style.display="flex";}
+ },1000);
+};
+
+// Submit Test
+submitBtn.onclick=()=>{
+ clearInterval(timer);
+ popup.style.display="flex";
+};
+
+// Answer selection highlight
+document.querySelectorAll('.question').forEach(q=>{
+ const options = q.querySelectorAll('.options button');
+ options.forEach(btn=>{
+   btn.onclick=()=>{
+     options.forEach(b=>b.classList.remove('selected'));
+     btn.classList.add('selected');
+   }
+ });
+});
+</script>
+
+</body>
+</html>
